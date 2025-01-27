@@ -31,7 +31,7 @@ const cartReducer = createSlice({
     },
     updateCartItemQuantity: (state, action) => {
       const item = state.cartItems.find(
-          (item) => item.id === action.payload.id
+          (item) => item.id === action.payload.product.id
       );
       if(item) {
         item.quantity = action.payload.value;

@@ -9,7 +9,7 @@ function HomePage() {
       <div className="box-content">
         <Header />
         <div className="content">
-          <div className="top_brand">
+          <div className="top_brand center">
             <div className="top_brand_img">
               <img className="top_brand_pic" src="/images/banner.png" alt="Man" />
               <div className="top_brand_title">

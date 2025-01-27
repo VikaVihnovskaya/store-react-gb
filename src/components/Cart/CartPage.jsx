@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import products from "../../data/products";
 import {clearCart, removeFromCart, updateCartItemQuantity} from "../../store/CartReducer";
 import Header from "../Header/Header";
@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 
 const CartPage = () => {
 
-  const cartItems = useSelector(state => state.cartItems);
+  const cartItems = useSelector(state => state.cartItems.cartItems);
   const dispatch = useDispatch();
 
   const [totalPrice, setTotalPrice] = useState(0);
@@ -16,7 +16,8 @@ const CartPage = () => {
   useEffect(() => {
     let total = 0;
     cartItems.forEach((item) => {
-      const product = products.find((product) => product.id === item.id);
+      let product;
+      product = products.find((product) => product.id === item.id);
       total += product.price * item.quantity;
     });
     setTotalPrice(total);
@@ -56,16 +57,12 @@ const CartPage = () => {
                                   {item.title}
                                 </h4>
                                 <p className="cart-box__card_content">
-                                  Price:&nbsp;
-                                  <span className="cart-box__card_price cart-box__card_value">
-                              ${item.price}
-                            </span>
+                                  $Price:&nbsp;
+                                  <span className="cart-box__card_price cart-box__card_value">{item.price}</span>
                                 </p>
                                 <p className="cart-box__card_content">
                                   Size:&nbsp;
-                                  <span className="cart-box__card_value">
-                              {item.size}
-                            </span>
+                                  <span className="cart-box__card_value">{item.size}</span>
                                 </p>
                                 <label
                                     htmlFor="quantity"

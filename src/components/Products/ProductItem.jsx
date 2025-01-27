@@ -13,12 +13,10 @@ function ProductItem(product) {
       <div className="item">
         <div className="item_img">
           <img className="item_pic" src={product.image} alt="productImg"/>
-          <div className="hover_img">
-            <div className="hover">
-              <Link className="add-to-cart" to="/cartPage" onClick={(e) => handleAddToCart(product)}></Link>
+          <div className="item_add-box"  onClick={(e) => handleAddToCart(product)}>
+              <Link className="item_add-flex" to="/cartPage"></Link>
               <img src="/images/btn-cart.svg" alt="cart"/>
-              <p className="add-text">Add to Cart</p>
-            </div>
+              <p className="item_add-text">Add to Cart</p>
           </div>
         </div>
           <div className="item_text">

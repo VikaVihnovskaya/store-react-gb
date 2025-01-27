@@ -1,6 +1,6 @@
-import 'style/style.scss'
+import './style/style.scss'
 import './App.css';
-import {Route, Router, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import CatalogPage from "./components/CatalogPage/CatalogPage";
 import RegistrationPage from "./components/RegistrationPage/RegistrationPage";
@@ -13,7 +13,7 @@ function ProductPage() {
 function App() {
   return(
       <div>
-        <Router>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product" element={<ProductPage />} />
@@ -21,7 +21,7 @@ function App() {
             <Route path="/registration" element={<RegistrationPage />} />
             <Route path="/catalog" element={<CatalogPage />} />
           </Routes>
-        </Router>
+        </BrowserRouter>
       </div>
   )
 }

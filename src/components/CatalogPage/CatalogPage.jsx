@@ -156,7 +156,7 @@ function CatalogPage() {
                     <input
                         type="checkbox"
                         className="sorter__checkbox"
-                        id="sorter__size-XS"
+                        id="sorter__size-S"
                         onChange={() => handleSizeChange("S")}
                         checked={selectedSizes.includes("S")}
                     />
@@ -168,7 +168,7 @@ function CatalogPage() {
                     <input
                         type="checkbox"
                         className="sorter__checkbox"
-                        id="sorter__size-S"
+                        id="sorter__size-M"
                         onChange={() => handleSizeChange("M")}
                         checked={selectedSizes.includes("M")}
                     />
@@ -180,7 +180,7 @@ function CatalogPage() {
                     <input
                         type="checkbox"
                         className="sorter__checkbox"
-                        id="sorter__size-M"
+                        id="sorter__size-L"
                         onChange={() => handleSizeChange("L")}
                         checked={selectedSizes.includes("L")}
                     />
@@ -192,7 +192,7 @@ function CatalogPage() {
                     <input
                         type="checkbox"
                         className="sorter__checkbox"
-                        id="sorter__size-L"
+                        id="sorter__size-XL"
                         onChange={() => handleSizeChange("XL")}
                         checked={selectedSizes.includes("XL")}
                     />

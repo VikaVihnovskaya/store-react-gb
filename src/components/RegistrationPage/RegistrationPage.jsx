@@ -7,7 +7,7 @@ function Registration() {
       <div className="box-content">
         <Header />
         <content className="content">
-          <div className="head">
+          <div className="head center">
             <h1 className="head_title">REGISTRATION</h1>
           </div>
           <div className="reg-box center">

@@ -87,16 +87,15 @@ const Header = () => {
                 </div>
               </li>
               <li className="user">
-                <Link to='#'>
+                <Link to="/registration">
                   <img src='/images/person.svg' alt="User"/>
                 </Link>
               </li>
-              <li className="cart">
+              <li className="/cart">
                 <Link to="/cartPage">
                   <img src='/images/btn-cart.svg' alt="Cart"/>
-                  {totalItems > 0 && <span className='cart_count'>{totalItems}</span>}
                 </Link>
-
+                <span className="cart-count">{totalItems}</span>
               </li>
             </ul>
           </div>
